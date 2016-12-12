@@ -5,13 +5,6 @@ function fish_prompt
     set -l base
     set -l base_color grey black
 
-    if test "$fish_key_bindings" = "fish_vi_key_bindings"
-        # disable the mode prompt on the left
-        function fish_mode_prompt
-        end
-    end
-
-
     if test "$PWD" = ~
         set base "~"
 
