@@ -5,6 +5,10 @@ function fish_prompt
     set -l base
     set -l base_color grey black
 
+    if test "$fish_key_bindings" = "fish_vi_key_bindings"
+        functions -e fish_mode_prompt
+    end
+
     if test "$PWD" = ~
         set base "~"
 
